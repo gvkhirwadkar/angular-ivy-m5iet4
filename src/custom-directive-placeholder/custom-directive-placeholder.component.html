@@ -1,0 +1,18 @@
+<h3>Normal *ngFor</h3>
+<div *ngFor="let data of randomArray; let i=index">
+  {{data?.firstName}}
+  {{data?.lastName}}
+  {{data?.age}}
+</div>
+
+<h3>Syntactical sugar removed</h3>
+<ng-template ngFor [ngForOf]="randomArray" let-data let-i="index">
+  <div>
+    {{data?.firstName}}
+    {{data?.lastName}}
+    {{data?.age}}
+    <p style="display:inline-block">with index {{i}}</p>
+  </div>
+</ng-template>
+
+<!-- <button app-highlight>I am green button</button> -->

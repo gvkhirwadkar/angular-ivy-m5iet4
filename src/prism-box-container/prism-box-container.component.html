@@ -1,0 +1,31 @@
+<div class="container">
+
+  <ng-template [ngIf]="showBox">
+    <app-box [checkedRadiovalue]="checkedRadiovalue"></app-box>
+  </ng-template>
+
+  <ng-template [ngIf]="showPrism">
+    <app-prism-cube [checkedRadiovalue]="checkedRadiovalue"></app-prism-cube>
+  </ng-template>
+
+  <p class="radio-group">
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="front" checked /> front
+  </label>
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="back" checked /> back
+  </label>
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="right" checked /> right
+  </label>
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="left" checked /> left
+  </label>
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="top" checked /> top
+  </label>
+    <label>
+  <input [(ngModel)]="checkedRadiovalue" type="radio" name="rotate-box-side" value="bottom" checked /> bottom
+  </label>
+  </p>
+</div>

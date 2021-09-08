@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.scene {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #ccc;
+  perspective: 750px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  text-align: center;
+  transform-origin: 100% center;
+}
+
+.card__face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.card__face--front {
+  background-color: red;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+  background-color: blue;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(180deg);
+}

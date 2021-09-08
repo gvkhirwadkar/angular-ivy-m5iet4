@@ -1,0 +1,28 @@
+* {
+  font-family: sans-serif;
+}
+
+button {
+  background-color: aqua;
+  border-radius: 10px;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.75);
+  display: block;
+  padding: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+.flex-container {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
